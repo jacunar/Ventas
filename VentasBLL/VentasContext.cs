@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using VentasModel;
 
 namespace VentasBLL {
     public partial class VentasContext : DbContext {
@@ -12,16 +13,16 @@ namespace VentasBLL {
             : base(options) {
         }
 
-        public virtual DbSet<Articulo> Articulos { get; set; } = null!;
-        public virtual DbSet<Categoria> Categorias { get; set; } = null!;
-        public virtual DbSet<DetalleIngreso> DetalleIngresos { get; set; } = null!;
-        public virtual DbSet<DetalleVenta> DetalleVentas { get; set; } = null!;
-        public virtual DbSet<Ingreso> Ingresos { get; set; } = null!;
-        public virtual DbSet<Persona> Personas { get; set; } = null!;
-        public virtual DbSet<Proveedor> Proveedores { get; set; } = null!;
-        public virtual DbSet<Role> Roles { get; set; } = null!;
-        public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
-        public virtual DbSet<Venta> Ventas { get; set; } = null!;
+        public virtual DbSet<Articulo> Articulos { get; set; }
+        public virtual DbSet<Categoria> Categorias { get; set; }
+        public virtual DbSet<DetalleIngreso> DetalleIngresos { get; set; }
+        public virtual DbSet<DetalleVenta> DetalleVentas { get; set; }
+        public virtual DbSet<Ingreso> Ingresos { get; set; }
+        public virtual DbSet<Persona> Personas { get; set; }
+        public virtual DbSet<Proveedor> Proveedores { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<Usuario> Usuarios { get; set; }
+        public virtual DbSet<Venta> Ventas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
             if (!optionsBuilder.IsConfigured) {

@@ -21,7 +21,7 @@ namespace VentasModel
         public decimal Total { get; set; }
         public string Estado { get; set; } = null!;
 
-        public virtual Proveedore IdProveedorNavigation { get; set; } = null!;
+        public virtual Proveedor IdProveedorNavigation { get; set; } = null!;
         public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
         public virtual ICollection<DetalleIngreso> DetalleIngresos { get; set; }
     }
